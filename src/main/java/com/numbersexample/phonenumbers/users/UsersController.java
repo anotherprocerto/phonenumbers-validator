@@ -44,7 +44,9 @@ public class UsersController {
 
     @GetMapping("/phoneNumbers")
     public String getPhoneNumbersFilters(Model model) {
-        List<Users> phoneNumbers = usersService.getUsersNumberByParams("UGANDA", "VALID");
+        
+        List<Users> phoneNumbers = usersService.getUsersNumberByParams(null, null);
+        //List<Users> phoneNumbers = usersService.getUsersNumberByParams(country, state);
         model.addAttribute("phoneNumbers",phoneNumbers);
         //model.addAttribute("name", "testing");
 

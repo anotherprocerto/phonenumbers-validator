@@ -2,10 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Serving Web Content</title>
+    <script type="text/javascript" src="../../phoneN.js"></script>
+    <link rel="stylesheet" href="../../phoneN.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>My Contacts</h1>
-    <p th:text="'Hello, ' + ${phoneNumbers} + '!'" />
+    <h1>Phone Numbers</h1>
+
+    <div class="col-6">
+        <table class="table">
+            <thead class="thead">
+            <tr>
+                <th scope="col"> Name </th>
+                <th scope="col"> Phone </th>
+                <th scope="col"> Country </th>
+                <th scope="col"> State </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${phoneNumbers.empty}">
+                <td colspan="2"> No Books Available </td>
+            </tr>
+            <tr th:each="phoneNumber : ${phoneNumbers}">
+                <td><span th:text="${phoneNumber.name}"> Name </span></td>
+                <td><span th:text="${phoneNumber.phone}"> Phone </span></td>
+                <td><span th:text="${phoneNumber.country}"> Country </span></td>
+                <td><span th:text="${phoneNumber.state}"> State </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

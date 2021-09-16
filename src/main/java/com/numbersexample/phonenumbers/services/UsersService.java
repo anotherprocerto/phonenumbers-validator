@@ -2,7 +2,7 @@ package com.numbersexample.phonenumbers.services;
 
 import com.numbersexample.phonenumbers.users.Users;
 import org.springframework.stereotype.Service;
-import com.numbersexample.phonenumbers.users.UsersRepository;
+import com.numbersexample.phonenumbers.repository.UsersRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,6 @@ public class UsersService {
     public List<Users> getUsersNumberByParams(String country, String state) {
         List<Users> users = usersRepository.findAll();
 
-        //if (country.equals(null) || state.equals(null)){
         if (country == null && state == null){
             for(Users user: users) {
                 validateParams(user);
@@ -128,4 +127,45 @@ public class UsersService {
         return country;
     }
 
+    public String updateStrCodeCountry(int country) {
+
+        String countrySTR;
+
+        switch(country) {
+            case 1:
+                countrySTR = "CAMEROON";
+                break;
+            case 2:
+                countrySTR = "ETHIOPIA";
+                break;
+            case 3:
+                countrySTR = "MAROCCO";
+                break;
+            case 4:
+                countrySTR = "MOZAMBIQUE";
+                break;
+            case 5:
+                countrySTR = "UGANDA";
+                break;
+            default:
+                countrySTR = null;
+        }
+     return countrySTR;
+    }
+
+    public String updateStrCodeState(int state) {
+
+        String stateStr;
+
+        if (state == 1){
+            stateStr = "VALID";
+        }
+        else if (state == 2){
+            stateStr = "NOTVALID";
+        }
+        else {
+            stateStr = null;
+        }
+        return stateStr;
+    }
 }

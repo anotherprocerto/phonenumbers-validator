@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Phone Number Validation</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Phone Number Validation</h1>
+
+    <p class="desc">
+        Create a single page application in Java (Frameworks allowed) that uses the provided
+        database (SQLite 3) to list and categorize country phone numbers.
+        Phone numbers should be categorized by country, state (valid or not valid), country
+        code and number.
+        The page should render a list of all phone numbers available in the DB. It should be
+        possible to filter by country and state. Pagination is an extra
+    </p>
+
+    <div id="buttons-filter">
+        <p class="exerc">
+            <a class="btn btn-primary cameroon-valid" href="http://localhost:8080/phoneNumbers/1/1" role="button">Cameroon Valid</a>
+            <a class="btn btn-primary cameroon-notvalid" href="http://localhost:8080/phoneNumbers/1/2" role="button">Cameroon Not Valid</a>
+            <a class="btn btn-primary cameroon-notvalid" href="http://localhost:8080/phoneNumbers/1/3" role="button">Cameroon All</a>
+        </p>
+
+        <p class="exerc">
+            <a class="btn btn-primary ethiopia-valid" href="http://localhost:8080/phoneNumbers/2/1" role="button">Ethiopia Valid</a>
+            <a class="btn btn-primary ethiopia-notvalid" href="http://localhost:8080/phoneNumbers/2/2" role="button">Ethiopia Not Valid</a>
+            <a class="btn btn-primary ethiopia-notvalid" href="http://localhost:8080/phoneNumbers/2/3" role="button">Ethiopia All</a>
+        </p>
+
+        <p class="exerc">
+            <a class="btn btn-primary morroco-valid" href="http://localhost:8080/phoneNumbers/3/1" role="button">Morroco Valid</a>
+            <a class="btn btn-primary morroco-notvalid" href="http://localhost:8080/phoneNumbers/3/2" role="button">Morroco Not Valid</a>
+            <a class="btn btn-primary morroco-notvalid" href="http://localhost:8080/phoneNumbers/3/3" role="button">Morroco All</a>
+        </p>
+
+        <p class="exerc">
+            <a class="btn btn-primary mozambique-valid" href="http://localhost:8080/phoneNumbers/4/1" role="button">Mozambique Valid</a>
+            <a class="btn btn-primary mozambique-notvalid" href="http://localhost:8080/phoneNumbers/4/2" role="button">Mozambique Not Valid</a>
+            <a class="btn btn-primary mozambique-notvalid" href="http://localhost:8080/phoneNumbers/4/3" role="button">Mozambique All</a>
+        </p>
+
+        <p class="exerc">
+            <a class="btn btn-primary uganda-valid" href="http://localhost:8080/phoneNumbers/5/1" role="button">Uganda Valid</a>
+            <a class="btn btn-primary uganda-notvalid" href="http://localhost:8080/phoneNumbers/5/2" role="button">Uganda Not Valid</a>
+            <a class="btn btn-primary uganda-notvalid" href="http://localhost:8080/phoneNumbers/5/3" role="button">Uganda All</a>
+        </p>
+
+        <p class="exerc">
+            <a class="btn btn-primary all-numbers" href="http://localhost:8080/phoneNumbers/all" role="button">All Contacts</a>
+        </p>
+    </div>
+
+
+
+
+
+</body>
+</html>

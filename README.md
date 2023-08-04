@@ -7,3 +7,8 @@ mvn spring-boot:run
 ```
 ### Resume
 Develop an app that allows to user validate phone numbers arround the world
+
+#### Tecnology Stack: 
+* Java
+* Spring Boot
+* HTML 5 & CSS
